@@ -1,0 +1,46 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333; /* Default font color */ 
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+  
+  .bg {
+    background: linear-gradient(to right, lightgoldenrodyellow, pink);
+    }
+  
+  /* Example of hover effect */
+  body:hover {
+      color: #FF5733; /* Change font color on hover */
+  }
+  
+  /* Example of animation */
+  @keyframes fadeInOut {
+      0% {
+          opacity: 0;
+      }
+      50% {
+          opacity: 1;
+      }
+      100% {
+          opacity: 0;
+      }
+  }
+  
+  
+  

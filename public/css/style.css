@@ -1,0 +1,354 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow:auto;
+}
+.city{
+  width: 200px;
+  height: 200px;
+  margin: 50px 50px 100px 50px;
+}
+.cimg .city:hover {
+  transform: scale(1.05); /* Slightly enlarges the buttons */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+}
+/* Base styles for the buttons */
+.cimg{
+  margin-left: 110px;
+}
+.cimg input[type="image"].city {
+  width: 20%; /* Default width */
+  margin: 10px; /* Default margin */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 800px) {
+  .cimg input[type="image"].city {
+    width: 40%; /* Smaller width on smaller screens */
+    margin: 5px; /* Smaller margin */
+  }
+}
+
+@media (max-width: 500px) {
+  .cimg input[type="image"].city {
+    width: 45%; /* Even smaller width on very small screens */
+    margin: 2px; /* Even smaller margin */
+  }
+}
+
+.main-box {
+  display: flex;
+  flex-wrap: wrap; /* This will allow the sub-boxes to wrap to the next line if there's not enough room */
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+  position: relative;
+  background-color: #ffdead; /* This is a color close to coconut */
+}
+.top-text {
+  position: absolute;
+  top: 0;
+  padding: 10px;
+  background-color: #ffdead;
+}
+.top-left {
+  left: 0;
+}
+.top-right {
+  right: 0;
+}
+.sub-box {
+  border: 1px solid black;
+  margin: 30px 10px 5px 10px;
+  padding: 0px 0px 0px 0px;
+  flex: 1; /* This allows the boxes to grow to fill available space, adjust as needed */
+  min-width: 120px; /* Adjust based on your requirement */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.sub-box p {
+  margin: 0; /* Remove default margin */
+}
+.sub-box img {
+  width: 100%; /* Makes the image take up the full width of the sub-box */
+  height: 180px; /* Set a fixed height for the images */
+  object-fit: cover; /* Cover the box without stretching. Use 'contain' to fit the whole image */
+  text-align: center;
+}
+ 
+.slider-image {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+ 
+.slider-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 1cm;
+}
+
+.full-screen-image {
+  width: 100vw; /* Use 100% of the viewport width */
+  height: 70vh; /* Use 100% of the viewport height */
+  object-fit: cover; /* Cover the container without losing aspect ratio */
+  object-position: center; /* Center the image within the container */
+}
+
+
+/*image slider*/
+
+.slider-container {
+  position: relative;
+  width: 100vw; /* Use 100% of the viewport width */
+  height: 70vh; /* Use 100% of the viewport height */
+  object-fit: cover; /* Cover the container without losing aspect ratio */
+  object-position: center;
+  margin: 20px 0px 0px 0px ;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.footer{
+  background-color: black;
+}
+
+
+.div1 {
+  width: 300px;
+  height: 100px;
+  border: 1px solid blue;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+}
+
+.navbar .logo {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+}
+ 
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      background-color: #333;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0px);
+  }
+}
+
+ 
+
+
+/* index1 container/card */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjusts the space between cards */
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 20px; /* Adjusts the border radius for a circular effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px; /* Adjust based on your requirement */
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card .imgBx img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .imgBx img {
+  transform: scale(1.1);
+}
+
+.card p {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.imgBx img {
+  max-width: 100%;
+  border-radius: 50%; /* Gives the images a circular shape */
+  object-fit: cover;
+  padding: 20px 30px 20px 20px;
+}
+
+/* fzb page */
+
+.P {
+  text-align: center;
+  background: linear-gradient(to right, #ff0000, #ff6600, #ffff00, #66ff33, #0000ff, #ff00ff);
+  background-size: 600% auto;
+  animation: gradientBG 8s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.P p {
+  margin: 0;
+}
+
+.P button {
+  margin-top: 10px;
+}
+
+
+.box img {
+  width: 100%;
+  height: auto; 
+}
+
+/* Ensures the .button-overlay elements are distributed evenly across the .box */
+.container {
+  width: 100vw;
+  display: flex; 
+  align-items: center;
+}
+
+.box {
+  width: 90vw;
+  height: auto;
+  border: 2px solid #000;
+  border-radius: 10px;
+  margin: 20px 0; /* Adds space between boxes */
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-overlay {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-overlay img {
+  width: 100%;
+  height: auto;
+}
+
+.button-overlay button {
+  position: absolute;
+  top: 80%;
+  z-index: 1;
+}
+
+
+
+/* Generic button styling */
+/* Adjustments for button positioning 
+.box .btn {
+  position: absolute;
+  top: 50%; /* Center vertically 
+  transform: translateY(-20%); /* Adjust vertical centering 
+  color: white;
+  font-size: 8px;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: black;*/
+/* Adjustments for small screens  
+@media (max-width: 768px) {
+  .box {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .item {
+    width: 80%; /* Larger width for smaller screens 
+  }
+}
+*/
